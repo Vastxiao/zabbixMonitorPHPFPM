@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>3.2</version>
-    <date>2017-11-07T15:32:30Z</date>
+    <version>3.4</version>
+    <date>2018-02-07T03:26:53Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -26,7 +26,7 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>phpfpm_discovery</key>
-                    <delay>1800</delay>
+                    <delay>30m</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -36,7 +36,6 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -50,24 +49,22 @@
                         <formula/>
                         <conditions/>
                     </filter>
-                    <lifetime>30</lifetime>
+                    <lifetime>30d</lifetime>
                     <description>发现php-fpm端口监控项</description>
                     <item_prototypes>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : accepted conn</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, accepted-conn]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -75,11 +72,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -91,27 +85,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : active processes</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, active-processes]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -119,11 +114,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -135,27 +127,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : idle processes</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, idle-processes]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -163,11 +156,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -179,27 +169,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : listen queue len</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, listen-queue-len]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -207,11 +198,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -223,27 +211,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : listen queue</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, listen-queue]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -251,11 +240,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -267,27 +253,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : max active processes</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, max-active-processes]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -295,11 +282,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -311,27 +295,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : max children reached</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, max-children-reached]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -339,11 +324,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -355,27 +337,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : max listen queue</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, max-listen-queue]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -383,11 +366,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -399,27 +379,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : pool</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, pool]</key>
-                            <delay>60</delay>
-                            <history>7</history>
+                            <delay>1m</delay>
+                            <history>1w</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -427,11 +408,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -443,27 +421,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : process manager</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, process-manager]</key>
-                            <delay>60</delay>
-                            <history>7</history>
+                            <delay>1m</delay>
+                            <history>1w</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>1</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -471,11 +450,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -487,27 +463,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : process used ratio</name>
                             <type>15</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, process-used-ratio]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -515,11 +492,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params>100*last(&quot;phpfpm_status[{#PORT}, active-processes]&quot;, 0)/last(&quot;phpfpm_status[{#PORT}, total-processes]&quot;, 0)</params>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -531,27 +505,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : slow requests</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, slow-requests]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -559,11 +534,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -575,27 +547,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : start since</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, start-since]</key>
-                            <delay>60</delay>
-                            <history>7</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>1w</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -603,11 +576,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -619,27 +589,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : start time</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, start-time]</key>
-                            <delay>60</delay>
-                            <history>7</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>1w</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -647,11 +618,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -663,27 +631,28 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>php-fpm port[{#PORT}] : total processes</name>
                             <type>7</type>
                             <snmp_community/>
-                            <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>phpfpm_status[{#PORT}, total-processes]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -691,11 +660,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -707,11 +673,14 @@
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
                                     <name>php-fpm {#PORT} status</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
@@ -732,6 +701,22 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
+                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, max-active-processes].last()}&gt;={Template php-fpm status:phpfpm_status[{#PORT}, total-processes].last()} and {Template php-fpm status:phpfpm_status[{#PORT}, process-manager].str(static)}=1</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>php-fpm port[{#PORT}] : max active processes  {ITEM.LASTVALUE} &gt; total process</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>1</status>
+                            <priority>5</priority>
+                            <description>php-fpm最大活动进程数大于php-fpm最大进程数，那说明你的最大进程数量太小了，请改大一点。</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
                             <expression>{Template php-fpm status:phpfpm_status[{#PORT}, max-children-reached].last()}&gt;0</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
@@ -748,15 +733,15 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, process-used-ratio].last()}&gt;{$PROCESS_RATIO}</expression>
+                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, process-used-ratio].last()}&gt;{$PHPFPM_PROCESS_RATIO}</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>php-fpm port[{#PORT}] : process used {ITEM.LASTVALUE}</name>
+                            <name>php-fpm port[{#PORT}] : process used ratio {ITEM.LASTVALUE} %</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
                             <status>0</status>
-                            <priority>4</priority>
+                            <priority>5</priority>
                             <description>php-fpm 进程数使用率</description>
                             <type>0</type>
                             <manual_close>0</manual_close>
@@ -764,16 +749,32 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, slow-requests].last()}&gt;0</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
-                            <name>php-fpm port[{#PORT}] : slow requests  {ITEM.LASTVALUE}</name>
+                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, slow-requests].min(5m)}&lt;&gt;0 and {Template php-fpm status:phpfpm_status[{#PORT}, slow-requests].delta(5m)}&lt;&gt;0</expression>
+                            <recovery_mode>1</recovery_mode>
+                            <recovery_expression>{Template php-fpm status:phpfpm_status[{#PORT}, slow-requests].min(5m)}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, slow-requests].delta(30m)}=0</recovery_expression>
+                            <name>php-fpm port[{#PORT}] : slow requests {ITEM.LASTVALUE}</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
                             <description>php-fpm缓慢请求的数量</description>
+                            <type>0</type>
+                            <manual_close>1</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(3m)}=1</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>php-fpm port[{#PORT}] : 监控3min未收到数据</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>5</priority>
+                            <description>php-fpm监控3min未收到数据，需要检查php-fpm是否卡住了．</description>
                             <type>0</type>
                             <manual_close>0</manual_close>
                             <dependencies/>
@@ -784,7 +785,7 @@
                         <graph_prototype>
                             <name>php-fpm {#PORT} : processes status</name>
                             <width>1000</width>
-                            <height>600</height>
+                            <height>500</height>
                             <yaxismin>0.0000</yaxismin>
                             <yaxismax>100.0000</yaxismax>
                             <show_work_period>1</show_work_period>
@@ -801,7 +802,7 @@
                             <graph_items>
                                 <graph_item>
                                     <sortorder>0</sortorder>
-                                    <drawtype>2</drawtype>
+                                    <drawtype>5</drawtype>
                                     <color>BBBB00</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>7</calc_fnc>
@@ -849,7 +850,7 @@
                                 </graph_item>
                                 <graph_item>
                                     <sortorder>4</sortorder>
-                                    <drawtype>5</drawtype>
+                                    <drawtype>2</drawtype>
                                     <color>00DDDD</color>
                                     <yaxisside>0</yaxisside>
                                     <calc_fnc>7</calc_fnc>
@@ -863,13 +864,14 @@
                         </graph_prototype>
                     </graph_prototypes>
                     <host_prototypes/>
+                    <jmx_endpoint/>
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
             <macros>
                 <macro>
-                    <macro>{$PROCESS_RATIO}</macro>
-                    <value>90</value>
+                    <macro>{$PHPFPM_PROCESS_RATIO}</macro>
+                    <value>75</value>
                 </macro>
             </macros>
             <templates/>
