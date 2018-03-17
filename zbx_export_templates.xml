@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-02-07T03:26:53Z</date>
+    <date>2018-02-14T01:54:43Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -765,7 +765,7 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(3m)}=1</expression>
+                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(3m)}=1 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(3m)}=1 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(3m)}=1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>php-fpm port[{#PORT}] : 监控3min未收到数据</name>
@@ -879,12 +879,12 @@
                 <screen>
                     <name>php-fpm</name>
                     <hsize>1</hsize>
-                    <vsize>1</vsize>
+                    <vsize>3</vsize>
                     <screen_items>
                         <screen_item>
                             <resourcetype>20</resourcetype>
-                            <width>1000</width>
-                            <height>600</height>
+                            <width>900</width>
+                            <height>400</height>
                             <x>0</x>
                             <y>0</y>
                             <colspan>1</colspan>
@@ -901,6 +901,50 @@
                                 <host>Template php-fpm status</host>
                             </resource>
                             <max_columns>1</max_columns>
+                            <application/>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>19</resourcetype>
+                            <width>900</width>
+                            <height>500</height>
+                            <x>0</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <key>phpfpm_status[{#PORT}, idle-processes]</key>
+                                <host>Template php-fpm status</host>
+                            </resource>
+                            <max_columns>3</max_columns>
+                            <application/>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>19</resourcetype>
+                            <width>900</width>
+                            <height>500</height>
+                            <x>0</x>
+                            <y>2</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <key>phpfpm_status[{#PORT}, process-used-ratio]</key>
+                                <host>Template php-fpm status</host>
+                            </resource>
+                            <max_columns>3</max_columns>
                             <application/>
                         </screen_item>
                     </screen_items>
