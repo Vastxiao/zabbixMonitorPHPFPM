@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2019-05-19T03:00:27Z</date>
+    <date>2019-05-21T03:54:25Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -770,36 +770,36 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(3m)}=1 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(3m)}=1 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(3m)}=1</expression>
+                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(3m)}=1 and {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(3m)}=1 and {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(3m)}=1</expression>
                             <recovery_mode>1</recovery_mode>
-                            <recovery_expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].last()}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].last()}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].last()}=0</recovery_expression>
+                            <recovery_expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(2m)}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(2m)}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(2m)}=0</recovery_expression>
                             <name>php-fpm port[{#PORT}] : 监控3min未收到数据</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
                             <status>0</status>
-                            <priority>4</priority>
+                            <priority>5</priority>
                             <description>php-fpm监控3min未收到数据，需要检查php-fpm是否卡住了．</description>
                             <type>0</type>
                             <manual_close>0</manual_close>
                             <dependencies>
                                 <dependency>
                                     <name>php-fpm port[{#PORT}] : 监控10min未收到数据</name>
-                                    <expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(10m)}=1 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(10m)}=1 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(10m)}=1</expression>
-                                    <recovery_expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].last()}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].last()}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].last()}=0</recovery_expression>
+                                    <expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(10m)}=1 and {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(10m)}=1 and {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(10m)}=1</expression>
+                                    <recovery_expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(2m)}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(2m)}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(2m)}=0</recovery_expression>
                                 </dependency>
                             </dependencies>
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(10m)}=1 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(10m)}=1 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(10m)}=1</expression>
+                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(10m)}=1 and {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(10m)}=1 and {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(10m)}=1</expression>
                             <recovery_mode>1</recovery_mode>
-                            <recovery_expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].last()}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].last()}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].last()}=0</recovery_expression>
+                            <recovery_expression>{Template php-fpm status:phpfpm_status[{#PORT}, pool].nodata(2m)}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, total-processes].nodata(2m)}=0 or {Template php-fpm status:phpfpm_status[{#PORT}, start-since].nodata(2m)}=0</recovery_expression>
                             <name>php-fpm port[{#PORT}] : 监控10min未收到数据</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
-                            <status>0</status>
+                            <status>1</status>
                             <priority>5</priority>
                             <description>php-fpm监控10min未收到数据，需要检查php-fpm是否卡住了．</description>
                             <type>0</type>
