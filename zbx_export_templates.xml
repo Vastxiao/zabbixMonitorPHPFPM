@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2019-07-02T09:38:39Z</date>
+    <date>2019-08-10T08:03:34Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -746,7 +746,7 @@
                             <correlation_tag/>
                             <url/>
                             <status>0</status>
-                            <priority>5</priority>
+                            <priority>4</priority>
                             <description>php-fpm 进程数使用率</description>
                             <type>0</type>
                             <manual_close>0</manual_close>
