@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2019-08-10T08:03:34Z</date>
+    <date>2019-12-02T10:24:24Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -738,7 +738,7 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, process-used-ratio].last()}&gt;{$PHPFPM_PROCESS_RATIO}</expression>
+                            <expression>{Template php-fpm status:phpfpm_status[{#PORT}, process-used-ratio].last()}&gt;{$PHPFPM_PROCESS_RATIO} and {Template php-fpm status:phpfpm_status[{#PORT}, process-used-ratio].last()} &gt;= {Template php-fpm status:phpfpm_status[{#PORT}, process-used-ratio].last()}</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>php-fpm port[{#PORT}] : process used ratio {ITEM.LASTVALUE} %</name>
@@ -762,7 +762,7 @@
                             <correlation_tag/>
                             <url/>
                             <status>0</status>
-                            <priority>4</priority>
+                            <priority>3</priority>
                             <description>php-fpm缓慢请求的数量</description>
                             <type>0</type>
                             <manual_close>1</manual_close>
